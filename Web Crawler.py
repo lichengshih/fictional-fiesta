@@ -38,7 +38,7 @@ for i in range(1,6):
     soup = BeautifulSoup(webpage.text, "html.parser")
     # review=soup.find('div', {'class':'uc-reviews'})
     reviews=soup.find_all('div', {'class':'uc-review uc-review-with-product'})
-    
+
     for i in reviews:
         comment=i.find('div', {'class':'two-line-dot uc-content-link'}).text
         author=i.find('div',{'class':'author-name'}).text
@@ -65,5 +65,3 @@ for i in best_seller:
     print('排行:',rank)
     print('書名:',book_name)
     print('作者:',author,'\n')
-
-
